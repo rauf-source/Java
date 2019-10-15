@@ -58,6 +58,11 @@ printData(gb.getEachMinimumMarks(gb.getMarks()));
 System.out.println("Maximum marks of each student");
 printData(gb.getEachMaximumMarks(gb.getMarks()));
 
+System.out.println("Which student's average,min,max marks you want?");
+int passId = input.nextInt();
+
+gb.printAll(passId);
+
 }
 public static void printData(int arr1[][]){
 

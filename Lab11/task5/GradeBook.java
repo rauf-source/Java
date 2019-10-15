@@ -1,4 +1,7 @@
 //Make GradeBook class with courseName and grades fields
+//watchout, this has some bugs. Just care about the concepts
+//this is not cool, Probably might make this again but its not worth it,  all it is is array manipulation
+
 public class GradeBook{
 
 private String courseName;
@@ -162,6 +165,38 @@ max =  arr[0][0];
 	return solved;
 
 }
+public void printAll(int PassId){
+for(int i = 0;i < id.length;i++){
+//get average
+	if(id[i] == PassId){
+int sum = 0;
+int min = marks[i][0];
+int max =  marks[i][0];
+	for(int j = 0; j < marks[i].length;j++){
+		sum+= marks[i][j];
+//above gets sum
+		//below gets min max
+		if(min > marks[i][j]){
+			min =  marks[i][j];
+		}
 
+//max
+		if(max < marks[i][j]){
+			max =  marks[i][j];
+		}
+
+	}
+	int avg =  sum/marks[i].length;
+System.out.println("avergae of student is " + avg);
+System.out.println("Maximum marks of student is " + max);
+System.out.println("Minimum marks  of student is " + min);
+
+
+		}
+
+
+	}
+
+}
 
 }
