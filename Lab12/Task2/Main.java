@@ -41,8 +41,14 @@ for(int i  =0; i < list.size(); i++){
 
 //
 displayList(list,"removing  the first student using reference");
-
+System.out.println("Total number of students");
 System.out.println(list.size());
+
+list.set(0,new Student("Elon Musk","Sp-19-BSE-101", (double) 4.00));
+
+System.out.println("information of the first student");
+
+display(list.get(0));
 
 }
 
