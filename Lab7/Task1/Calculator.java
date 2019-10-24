@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 public class Calculator {
 
 	public static void main(String args[]){
@@ -106,4 +106,3 @@ public class Calculator {
 	}
 }
  //code by AbdulRauf(github.com/abdulCode) with love for educational purposes only
-//try running on an ide.
