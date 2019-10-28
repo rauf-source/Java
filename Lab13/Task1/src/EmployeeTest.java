@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+import java.lang.*;
 /**
  *
- * @author Admin
- */
-import java.util.Scanner;
+ * @author sp19-bse-043
+ */import java.util.Scanner;
 public class EmployeeTest {
 
     /**
@@ -22,9 +16,12 @@ public class EmployeeTest {
         for(int i = 0; i < employee.length; i++){
             int id=  inputInteger("Id");
             String name = inputString("Name");
+            
             String gender  = inputString("Gender");
+             Gender g1 = Gender.valueOf(gender);
             double basicSalary =  inputDouble("BasicSalary");
-            employee[i] = new Employee(id,name, gender,basicSalary);
+           
+            employee[i] = new Employee(id,name, g1 ,basicSalary);
             System.out.println("Employee bonus is" + employee[i].calculateBonus());
         }
     }
