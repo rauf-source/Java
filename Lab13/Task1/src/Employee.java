@@ -7,20 +7,20 @@
 /**
  *
  * @author Admin
- */
-public class Employee {
+ */public class Employee {
     
-    public enum Gender {Male, Female};
+    //public enum Gender {Male, Female};
  
     private int id;
     private String name;
     private Gender gender;
     private double basicSalary;
 
-    public Employee(int id, String name, String gender, double basicSalary) {
+    public Employee(int id, String name, Gender gender, double basicSalary) {
         this.id = id;
         this.name = name;
-        setGender(gender);
+       // this.gender=Geder.valueOf()
+        this.gender = gender;
         this.basicSalary = basicSalary;
     }
     public double calculateBonus(){
@@ -32,13 +32,6 @@ public class Employee {
         }
     }
 
-    public void setGender(String gender) {
-        if(gender.equals("Male")){
-            this.gender  =  Gender.Male;
-        }
-        else {
-            this.gender =  Gender.Female;
-        }
-    }
+   
     
 }
