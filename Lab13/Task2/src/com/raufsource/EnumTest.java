@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.raufsource;
 
+package com.raufsource;
+import java.util.EnumSet;
 /**
  *
  * @author Admin
@@ -23,12 +24,10 @@ public class EnumTest {
         }
         
         System.out.println("\nSome Books copyrighted between 2011 and 2013\n");
-        for(Book b : Book.values()){
-            if(b.getYear() >= 2011 && b.getYear() <= 2013){
-                System.out.println(b + " " + b.getTitle() +" " +  b.getYear());
-
-            }
+        for(Book b : EnumSet.range(Book.CHTP, Book.VBHTP)){
+                System.out.println(b + " " + b.getTitle() +" " +  b.getYear());            
         }
     }
     
 }
+//code by rauf-source
