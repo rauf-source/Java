@@ -23,11 +23,11 @@ public class EnumTest {
             System.out.println(b + " " + b.getTitle() +" " +  b.getYear());
         }
         
-        System.out.println("\nSome Books copyrighted between 2011 and 2013\n");
+        System.out.println("\nSome Books information\n");
         for(Book b : EnumSet.range(Book.CHTP, Book.VBHTP)){
                 System.out.println(b + " " + b.getTitle() +" " +  b.getYear());            
         }
     }
     
 }
-//code by rauf-source
+//code by rauf-source check out my website for more stuff rauf-source.github.io/rauf-source for more stuff

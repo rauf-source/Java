@@ -3,6 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+//all labs are at https://github.com/rauf-source/Java/
+//or at my website https://raufsource.github.io.rauf-source
 package com.raufsource;
 public enum Book{
     JHTP("Java How to Program", 2010),
@@ -26,3 +28,4 @@ public enum Book{
     }
     
 }
+//code by rauf-source 
