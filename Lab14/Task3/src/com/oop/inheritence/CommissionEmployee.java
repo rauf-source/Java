@@ -12,12 +12,15 @@ package com.oop.inheritence;
 public class CommissionEmployee extends Employee{
     private double grossSales; // gross weekly sales
     private double commissionRate; // commission percentage
+
+    
 // five-argument constructor
 
     public CommissionEmployee(double grossSales, double commissionRate, String firstName, String lastName, String socialSecurityNumber) {
         super(firstName, lastName, socialSecurityNumber);
         this.grossSales = grossSales;
         this.commissionRate = commissionRate;
+        calculateBonus();
     }
 
    
@@ -57,7 +60,31 @@ public class CommissionEmployee extends Employee{
  return getCommissionRate() * getGrossSales() ;
  }
 
- // return String representation of CommissionEmployee object
+
+    public double calculateBonus() {
+         
+
+         if(earnings() > 10000 && earnings() <20000){
+       return 5000;
+    }
+    else if(earnings() >= 20000 && earnings() <50000){
+       return 10000;
+    }
+    else if (earnings() > 50000){
+     return 20000;
+        
+    }
+    else{
+        return 0;
+    } 
+
+      
+    }
+
+
+   
+ 
+// return String representation of CommissionEmployee object
 
     @Override
     public String toString() {

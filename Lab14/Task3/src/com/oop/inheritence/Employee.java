@@ -35,6 +35,18 @@ public class Employee {
         this.socialSecurityNumber = socialSecurityNumber;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getSocialSecurityNumber() {
+        return socialSecurityNumber;
+    }
+
     @Override
     public String toString() {
         return "Employee{" + "firstName=" + firstName + ", lastName=" + lastName + ", socialSecurityNumber=" + socialSecurityNumber + '}';
