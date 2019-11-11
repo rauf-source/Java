@@ -28,34 +28,39 @@ public class Test {
         shape[3] = new Circle(4, "Gray", false);
 
         System.out.println("What you want to edit");
-for(int i =  0; i < 4; i++){
-    int n = inputInteger("1 for circle\n2 for rectangle");
-    if(shape[i] instanceof Circle && n == 1){
-        Circle circle =  (Circle)shape[i];
-        circle = new Circle(inputDouble("radius"), inputString("Color"), inputBoolean("Filled?"));
-    }
-    else if (shape[i] instanceof Rectangle && n==2){
-        Rectangle rectangle  = (Rectangle)shape[i];
-        rectangle = new Rectangle(inputDouble("width"), inputDouble("length"), inputString("color"),inputBoolean("Filed?") );
-    }
-    
-//        switch(inputInteger("1: circle\n2: rectangle")){
-//                case 1:
-//              //double radius, String color, boolean filled
-//                    shape[i] = new Circle(inputDouble("radius"), inputString("Color"), inputBoolean("Filled?"));
-//                    System.out.println("area = " + shape[i].getArea() + "\nPerimeter " + shape[i].getPerimeter());
-//                break;
-//                case 2:
-//                          //double width, double length, String color, boolean filled
-//                    shape[i] = new Rectangle(inputDouble("width"), inputDouble("length"), inputString("color"),inputBoolean("Filed?") );
-//                    System.out.println("area = " + shape[i].getArea() + "\nPerimeter " + shape[i].getPerimeter());
-//                    
-//                break;
-//                default:
-//                    System.out.println("you didn't enter a valid number");
-//                       
-//        }
+    //3.	Show the user a menu, which shape’s data he wants to change (circle:1, or rectangle:2). 
+        
+      
+            int n = inputInteger("1 for circle and 2 for rectangle");
+            //o	Input shape data from user (length, width in case of rectangle, and radius in case of circle)
+            if(n ==1 ){
+               double radius = inputDouble("radius :");
+
+
+                for(int j = 0 ; j < shape.length ;j++){
+                   if(shape[j] instanceof Circle){
+                       Circle c =  (Circle)shape[j];
+                       c.setRadius(radius);
+                    
+                   }
+                  
+                }
+            }
+            else{
+                double length = inputDouble("length");
+                double width =  inputDouble("width");
+                 for(int j = 0 ; j < shape.length ;j++){
+                   if(shape[j] instanceof Rectangle){
+                       Rectangle r =  (Rectangle)shape[j];
+                       r.setLength(length);
+                       r.setWidth(width);
+                 
+                   }
+                   
+            }
+        
         }
+    
 shapesSummary(shape);
 
     }
@@ -87,8 +92,21 @@ shapesSummary(shape);
   
     public static void shapesSummary(Shape [] shape){
 for(int i  = 0; i < shape.length; i++){  
-        System.out.println("area = " + shape[i].getArea() + "\nPerimeter " + shape[i].getPerimeter());
+    
+    if(shape[i] instanceof Rectangle){
+        System.out.println("\nrectangle data");
+         System.out.println("area = " + shape[i].getArea() + "\nPerimeter " + shape[i].getPerimeter());
+         
+         System.out.println(shape[i].toString() + "\n");
+    }
+    else {
+        System.out.println("circle data");
+         System.out.println("area = " + shape[i].getArea() + "\nPerimeter " + shape[i].getPerimeter());
+         System.out.println(shape[i].toString() + "\n");
+    }
+   
 }
+
     }
     
 }
