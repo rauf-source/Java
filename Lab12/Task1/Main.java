@@ -3,11 +3,11 @@ public class Main{
 	public static void main(String args[]){
 		Scanner input =  new Scanner(System.in);
 
-		ArrayList<String> student = new ArrayList<String>(); 
-		student.add("Ali");
-		student.add("Ahmad");
-		student.add("Umar");
-		student.add("Talha");
+		ArrayList<String> student = new ArrayList<String>(Arrays.asList("Ali", "Ahmad", "Umar", "Talha")); 
+//		student.add("Ali");
+//		student.add("Ahmad");
+//		student.add("Umar");
+//		student.add("Talha");
 		
 		display(student);
 //step 1 add 2 new stdnts
