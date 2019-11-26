@@ -38,7 +38,7 @@ while(flag1){
         case 2:
             //String personName, double bookPrice, Authors[] authors, String bookName
             //String authorName, boolean authorGender, double bookPrice, Authors[] authors, String bookName
-            issuable.add(new Autobiography(inputString("Person Name"), inputDouble("BookPrice"), ))
+            issuable.add(new Autobiography(inputString("Person Name "), inputDouble("BookPrice "), inputAuthors("Input Authro data"),inputString("BookName ")));
             break;
         case 3: 
             flag1=  false;
@@ -60,7 +60,11 @@ while(flag1){
         System.out.println(statement);
         return input.nextDouble();
     }   
- public static void function2 (){
+ public static Authors[] inputAuthors(String statement){
+    int n =  4;
+    
+     Author authors[4] = new Authors[4];
      
+ 
  }
 }
