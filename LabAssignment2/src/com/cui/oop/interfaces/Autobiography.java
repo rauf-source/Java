@@ -16,10 +16,24 @@ public class Autobiography extends Book {
         super(bookPrice, authors, bookName);
         this.personName = personName;
     }
+    
+    /*
+i.	issue() method in Autobiography returns true 
+    if the price of book is greater than 1000/-PKR and the book has more than 2 authors. Otherwise, 
+    it displays an error message “Invalid issue operation.”, and returns false
+   */
      public boolean issue(){
-         return true;
+         if( getBookPrice() > 1000 && getAuthors().length > 2){
+             return true;
+         }
+         else{
+             System.out.println("Invalid ISsue operation");
+             return false;
+         }
+         }
+     public double computePersonLoyalty(){
+         return getBookPrice() *  10/100; 
      }
-
     @Override
     public String toString() {
         return "Autobiography{" + "personName=" + personName + '}';

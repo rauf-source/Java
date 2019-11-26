@@ -13,7 +13,7 @@ public class Authors extends Book{
     //authorname,authorGender
     private String authorName;
     private boolean authorGender;
-
+//true is male
     public Authors(double bookPrice, Authors[] authors, String bookName) {
         super(bookPrice, authors, bookName);
     }

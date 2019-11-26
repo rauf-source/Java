@@ -22,8 +22,24 @@ public abstract class Book implements Issuable {
     public double getBookPrice() {
         return bookPrice;
     }
+
+    public Authors[] getAuthors() {
+        return authors;
+    }
+    
+    public abstract boolean issue();
+    //ii.	computeAuthorLoyalty() method calculates total loyalty payable to authors using following rules\
+    
     //computeAuthorLoyalty
-//    public abstract double computeAuthorLoyalty();
+    public  double computeAuthorLoyalty(){
+//1000, 30% of it, 300, then divided by num of authors
+        double loyalty =  bookPrice * (30/100) ;
+        loyalty =  loyalty/authors.length;
+        if(authors[1].isAuthorGender() == true){
+            loyalty += 50;
+        }
+        return loyalty;
+    }
     
     
 }

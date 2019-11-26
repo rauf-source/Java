@@ -28,7 +28,16 @@ public class Borrower implements Issuable{
 
     @Override
     public boolean issue() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        for(int i = 0; i < 20; i++){
+            System.out.print("-");
+        }
+        System.out.println("|  ID : " +  borrowerId + "   |");
+        System.out.println("|  Name : " +  borrowerId + "   |");
+
+        for(int i = 0; i < 20; i++){
+            System.out.print("-");
+        }        
+        return true;
     }
    
     
