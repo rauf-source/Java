@@ -16,11 +16,19 @@ public class New {
     /**
      * @param args the command line arguments
      */
-   
+  static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
         // TODO code application logic here
+        int x;
+        System.out.println("Please input a number x");
+     
+        try{
+               x =  input.nextInt();
+        } catch (InputMismatchException e){
+            x= 0;
+        }
+        System.out.println("x is " + x);
     
-  ArrayList<String> students = new ArrayList<String>(Arrays.asList("Rauf", "Qasim", "Hisham", "Dick Cheney"));
 
     }
 }

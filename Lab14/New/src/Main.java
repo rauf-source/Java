@@ -15,6 +15,10 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Person zmeet = new Person();
+        if(null instanceof Person){
+        
+    }
     }
     
 }
