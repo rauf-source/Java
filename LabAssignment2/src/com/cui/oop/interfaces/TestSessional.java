@@ -61,10 +61,10 @@ while(flag1){
         return input.nextDouble();
     }   
  public static Authors[] inputAuthors(String statement){
-    int n =  4;
+    int n =  inputInteger("Please input the number of integers");
     
-     Author authors[4] = new Authors[4];
-     
+     Authors[] authors = new Authors[n] ;
+   
  
  }
 }
