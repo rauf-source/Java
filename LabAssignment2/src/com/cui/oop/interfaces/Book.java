@@ -32,13 +32,19 @@ public abstract class Book implements Issuable {
     
     //computeAuthorLoyalty
     public  double computeAuthorLoyalty(){
-//1000, 30% of it, 300, then divided by num of authors
-        double loyalty =  bookPrice * (30/100) ;
-        loyalty =  loyalty/authors.length;
-        if(authors[1].isAuthorGender() == true){
-            loyalty += 50;
+//1000, 30% of it, 300, then divided by num of authors 
+double loyalty =  bookPrice * (30/100) ; //300
+double avg =  loyalty / authors.length; // 300/ num = 100 lets say its 3
+for(int i = 0; i < authors.length; i++){
+   
+        avg += avg;//100 +100 + 100
+     if(authors[1].isAuthorGender() == false){
+            avg += 50; //300 + 100 if 2 f = 400
         }
-        return loyalty;
+    
+}
+ 
+        return avg;
     }
     
     
