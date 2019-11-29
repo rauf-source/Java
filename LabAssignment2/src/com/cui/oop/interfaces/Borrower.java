@@ -28,15 +28,17 @@ public class Borrower implements Issuable{
 
     @Override
     public boolean issue() {
+        System.out.print("|");
         for(int i = 0; i < 20; i++){
             System.out.print("-");
         }
-        System.out.println("|  ID : " +  borrowerId + "   |");
-        System.out.println("|  Name : " +  borrowerId + "   |");
+        System.out.println("|\n|  ID : " +  borrowerId + "   |");
+        System.out.println("|  Name : " +  borrowerName + "   |");
 
         for(int i = 0; i < 20; i++){
             System.out.print("-");
         }        
+        System.out.println();
         return true;
     }
    

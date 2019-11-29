@@ -14,7 +14,7 @@ public abstract class Book implements Issuable {
     private Authors authors[];
     private String bookName;
 
-    public Book(double bookPrice, Authors[] authors, String bookName) {
+    public Book(double bookPrice,Authors authors[], String bookName) {
         this.bookPrice = bookPrice;
         this.authors = authors;
         this.bookName = bookName;

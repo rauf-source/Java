@@ -25,11 +25,12 @@ public class TestSessional {
 //                 Note that this loop ends when user inputs value 3.
  
 
-boolean flag1 =true;
+boolean flag1 =true;  
+ArrayList<Issuable> issuable =  new ArrayList<Issuable>();
 while(flag1){
     System.out.println("Borrower :1 , AutoBiography:2, Exit : 3");
 
-    ArrayList<Issuable> issuable =  new ArrayList<Issuable>();
+  
 
     switch(input.nextInt()){
         case 1  :
@@ -38,7 +39,12 @@ while(flag1){
         case 2:
             //String personName, double bookPrice, Authors[] authors, String bookName
             //String authorName, boolean authorGender, double bookPrice, Authors[] authors, String bookName
-            issuable.add(new Autobiography(inputString("Person Name "), inputDouble("BookPrice "), inputAuthors("Input Authro data"),inputString("BookName ")));
+            Double bookPrice = inputDouble("Book Price: ");
+            String bookName = inputString("Book Name");
+            issuable.add(new Autobiography(inputString("Person Name "),
+                   bookPrice,
+                    inputAuthors("Input Authro data"),
+                    bookName));
             break;
         case 3: 
             flag1=  false;
@@ -46,7 +52,18 @@ while(flag1){
         default:
             break;
     }
+    //point 3
+    
+    
 }
+if(issuable.size() >= 2){
+        issuable.remove(issuable.size() -1);
+    }
+    for(int i = 0; i < issuable.size(); i++){
+        if(issuable.get(i).issue()== true){
+            System.out.println("Issue Succesfull");
+        }
+    }
     }
  public static int inputInteger(String statement){
         System.out.println(statement);
@@ -54,17 +71,36 @@ while(flag1){
     }   
   public static String inputString(String statement){
         System.out.println(statement);
-        return input.nextLine();
+        return scanner.nextLine();
     }   
     public static double inputDouble(String statement){
         System.out.println(statement);
         return input.nextDouble();
     }   
+     public static boolean inputBoolean(String statement){
+        System.out.println(statement);
+        int n =  input.nextInt();
+        if(n == 1){
+            return true;
+        }
+        
+        else {
+            return false;
+        }
+    }   
  public static Authors[] inputAuthors(String statement){
-    int n =  inputInteger("Please input the number of integers");
+     System.out.println("How many Authors?");
+    int n =  input.nextInt();
     
      Authors[] authors = new Authors[n] ;
-   
- 
+     
+   //double bookPrice, Authors[] authors, String bookName
+     //save authors data into another array then at the end merge it with the one to be returned
+     //The question didn't make any sense so I had to have a little twist
+ for(int i =0; i < authors.length; i++){
+     
+     authors[i] = new Authors(inputString("Author Name"), inputBoolean("1 for Male, 2 or anyother number for Female"));
+ }
+ return authors;
  }
 }

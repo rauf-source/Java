@@ -11,7 +11,7 @@ package com.cui.oop.interfaces;
  */
 public class Autobiography extends Book {
     private String personName;
-
+     private Authors authors[];
     public Autobiography(String personName, double bookPrice, Authors[] authors, String bookName) {
         super(bookPrice, authors, bookName);
         this.personName = personName;

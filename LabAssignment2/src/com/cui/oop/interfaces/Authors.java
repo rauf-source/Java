@@ -9,19 +9,14 @@ package com.cui.oop.interfaces;
  *
  * @author Admin
  */
-public class Authors extends Book{
+public class Authors{
     //authorname,authorGender
     private String authorName;
     private boolean authorGender;
 //true is male
-    public Authors(double bookPrice, Authors[] authors, String bookName) {
-        super(bookPrice, authors, bookName);
-    }
     
-   
-
-    public Authors(String authorName, boolean authorGender, double bookPrice, Authors[] authors, String bookName) {
-        super(bookPrice, authors, bookName);
+    
+    public Authors(String authorName, boolean authorGender) {
         this.authorName = authorName;
         this.authorGender = authorGender;
     }
