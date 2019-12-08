@@ -9,7 +9,7 @@ package com.technocrats;
  *
  * @author SP19-BSE-043
  */
-public class IllegalTriangleException extends Exception {
+public class IllegalTriangleException extends RuntimeException {
 
     /**
      * Creates a new instance of <code>IllegalTriangleException</code> without
