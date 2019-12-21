@@ -18,14 +18,13 @@ public class EnumTest {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("Books information");
-        
-        for(Book b: Book.values()){
-            System.out.println(b + " " + b.getTitle() +" " +  b.getYear());
+       
+        for(Book b:Book.values()){
+            System.out.println(b.getTitle() + b.getYear());
         }
         
-        System.out.println("\nSome Books information\n");
-        for(Book b : EnumSet.range(Book.CHTP, Book.VBHTP)){
-                System.out.println(b + " " + b.getTitle() +" " +  b.getYear());            
+        for(Book b: EnumSet.range(Book.JHTP, Book.CPPHTP)){
+            System.out.println(b.getTitle());
         }
     }
     

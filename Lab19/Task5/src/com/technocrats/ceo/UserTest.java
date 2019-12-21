@@ -32,6 +32,7 @@ User getUser(int userID) throws UserAccountIsBlockedException;
 void unblockUser(int userID);
 void blockUser(int userID);
         */
+        
       int flag = 1;
       while(flag == 1){
         int n = inputInteger("1. Add  User\n2.Update User\n3.DeleteUser\n4.UnBlock User\n5.Block User\n6.Display all the users\n7. Get User (handles checked exp)");
@@ -71,7 +72,7 @@ void blockUser(int userID);
            
        }
         
-        usersInMemory.addUser(new User(122,"213", true));
+      
     }
     
     

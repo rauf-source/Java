@@ -21,25 +21,36 @@ public class New1 {
     Statement statement = null;
     ResultSet resultSet = null;
     try {
-          connection = DriverManager.getConnection("jdbc:mysql://localhost/sms", "root", "abdul123");
+         connection = DriverManager.getConnection("jdbc:mysql://localhost/sms", "root", "abdul123");
          statement = connection.createStatement();
          resultSet = statement.executeQuery("SELECT * FROM students");
        
+        
         while(resultSet.next()){
-            System.out.println(resultSet.getInt("id"));
-            System.out.println(resultSet.getString("name"));
-            System.out.println(resultSet.getString("email"));
-            System.out.println(resultSet.getString("gender"));
+            System.out.print(resultSet.getInt("id"));
+            System.out.print(resultSet.getString("name"));
+            System.out.print(resultSet.getString("email"));
+            System.out.print(resultSet.getString("gender"));
             System.out.println(resultSet.getString("status"));
+            
+            
+            
+            
+            
         }
+       
         
-        
+        //update here
+String string = "DELETE  INTO students(id, name, email, gender, status) VALUES( 110, 'Ali','ali@gmail.com','M',1);";
+statement.executeUpdate(string);
         }catch(SQLException e){
-            e.printStackTrace();
-        }
+        System.out.println(e.getMessage());
+            }
             finally{
        
     }
+    
+    
     }
     
 }
